@@ -4,19 +4,30 @@
 Created on Friday July 20 2018
 
 @author: sichen
+
+To prep XRFtomo data collected at the BNP for tomo recon;
+To rename the hdf files to including an index and angle information
+
+to run:
+python HDFrename.py arg
+arg:
+directory for the hdf5 files; example
+/Users/sichen/src/XRFtomoPrep/test/
+
 """
 
-import os
+import sys, os
 import h5py
 import shutil
 
 
 #path_name = '/Users/sichen/src/XRFtomoPrep/test/'
-path_name = '/mnt/micdata1/bnp/2018-2/Nowakowski_tomo/img.dat/'
+#path_name = '/mnt/micdata1/bnp/2018-2/Nowakowski_tomo/img.dat/'
 
 
 
-def h5_rename(path_name):
+def h5_rename(argv):
+    path_name = argv[1]
     new_path = path_name + 'h5.tomo/'
     if not os.path.exists(new_path):
         os.mkdir(new_path)
@@ -37,5 +48,5 @@ def h5_rename(path_name):
                    
     
 if __name__ == '__main__':
-    h5_rename(path_name)
+    sys.exit(h5_rename(sys.argv))
     
