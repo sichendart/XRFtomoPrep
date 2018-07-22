@@ -15,7 +15,7 @@ import numpy as np
 
 def MaxDim(path):
     """
-    To find the max dim (x, y) of 32-tif images in a directory
+    To find the max dimensions of 32-tif images in a directory
     arg:
     directory, type: string
     example:
@@ -53,6 +53,8 @@ def pad(arr, dim, constant):
     arr_pad = np.pad(arr,((0,y),(0,x)), 'constant', 
                      constant_values = constant)
     return arr_pad
+    
+    
     
 def main(argv):
     """
