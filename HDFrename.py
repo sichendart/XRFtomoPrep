@@ -6,7 +6,7 @@ Created on Friday July 20 2018
 @author: sichen
 
 To prep XRFtomo data collected at the BNP for tomo recon;
-To rename the hdf files to including an index and angle information
+To rename the hdf files to include an index and angle information
 
 to run:
 python HDFrename.py arg
